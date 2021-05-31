@@ -1,0 +1,54 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>C:\Users\Lenovo\Downloads\apache-jmeter-5.4.1\bin</customWorkspace>
+  <builders>
+    <hudson.tasks.BatchFile>
+      <command>jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t C:\Users\Lenovo\Downloads\apache-jmeter-5.4.1\bin\POSTRequest.jmx -l C:\Users\Lenovo\Downloads\apache-jmeter-5.4.1\bin\POSTRequest.jtl</command>
+      <configuredLocalRules/>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers>
+    <hudson.plugins.performance.PerformancePublisher plugin="performance@3.19">
+      <errorFailedThreshold>-1</errorFailedThreshold>
+      <errorUnstableThreshold>-1</errorUnstableThreshold>
+      <errorUnstableResponseTimeThreshold></errorUnstableResponseTimeThreshold>
+      <relativeFailedThresholdPositive>-1.0</relativeFailedThresholdPositive>
+      <relativeFailedThresholdNegative>-1.0</relativeFailedThresholdNegative>
+      <relativeUnstableThresholdPositive>-1.0</relativeUnstableThresholdPositive>
+      <relativeUnstableThresholdNegative>-1.0</relativeUnstableThresholdNegative>
+      <nthBuildNumber>0</nthBuildNumber>
+      <configType>ART</configType>
+      <graphType>ART</graphType>
+      <modeOfThreshold>false</modeOfThreshold>
+      <failBuildIfNoResultFile>true</failBuildIfNoResultFile>
+      <compareBuildPrevious>false</compareBuildPrevious>
+      <optionType>ART</optionType>
+      <modePerformancePerTestCase>false</modePerformancePerTestCase>
+      <excludeResponseTime>false</excludeResponseTime>
+      <showTrendGraphs>true</showTrendGraphs>
+      <modeThroughput>false</modeThroughput>
+      <modeEvaluation>false</modeEvaluation>
+      <constraints class="empty-list"/>
+      <ignoreFailedBuilds>false</ignoreFailedBuilds>
+      <ignoreUnstableBuilds>false</ignoreUnstableBuilds>
+      <persistConstraintLog>false</persistConstraintLog>
+      <sourceDataFiles>C:\Users\Lenovo\Downloads\apache-jmeter-5.4.1\bin\POSTRequest.jtl</sourceDataFiles>
+      <filterRegex></filterRegex>
+      <junitOutput></junitOutput>
+      <percentiles>0,50,90,100</percentiles>
+      <baselineBuild>0</baselineBuild>
+    </hudson.plugins.performance.PerformancePublisher>
+  </publishers>
+  <buildWrappers/>
+</project>
