@@ -4,4 +4,5 @@ Performance Testing
 2. Add listeners like View Result Tree and Summary Report for the performance factors.
 3. Run the .jmx file using jenkins in excecute windows batch commands.
 4. Performance Trends can also be verified in jenkins.
-5. Added a demo video in the github repository for detailed reference.
+5. Make sure that environment variables for Java JDK and Jmeter is set accordingly.
+6. Added a demo video in the github repository for detailed reference.
